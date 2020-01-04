@@ -36,30 +36,34 @@ public class Main {
 
         while (!game.isFinished()) {
             Scanner input = new Scanner(System.in);
+
             System.out.print("[LIGAF12]=> ");
             String[] perintah = input.nextLine().split("\\s+");
 
             if (perintah[0].toUpperCase().equals("INIT")) {
+                int teamcount = Integer.parseInt(perintah[1]);
 
-                for (int i = 0; i < (Integer.parseInt(perintah[1])); i++) {
+                for (int i = 0; i < teamcount; i++) {
 
                     Pemain[] pemains = new Pemain[5];
                     for (int j = 0; j < 5; j++) {
 
                         ArrayList<String> dummyplayer = new ArrayList<>(arrayOfPlayerName);
-                        int nomorpemain = ThreadLocalRandom.current().nextInt(1, 100);
+                        int nomorpemain = ThreadLocalRandom.current().nextInt(1, 100); // exclusive
 
                         pemains[j] = new Pemain(pop(dummyplayer), nomorpemain);
                     }
                     timpemain.add(new Tim(pop(arrayOfTeamName), pemains));
                 }
+            }
 
-                System.out.println(timpemain);
-                for (Tim x : timpemain) {
-                    x.PrintTim();
-                    x.PrintAnggota();
+            if (perintah[0].toUpperCase().equals("NEXTGAME")) {
+                if (perintah.length == 1) {
+
                 }
+
             }
         }
+        System.out.println("GOODBYE...");
     }
 }

@@ -1,13 +1,12 @@
 public class Game {
-    private boolean finished = false;
+    public boolean finished;
 
-    public boolean isFinished() {
-        return finished;
+    public Game() {
+        this.finished = false;
     }
 
-    public boolean finished() {
-        finished = true;
-        return finished;
+    public boolean isFinished() {
+        return this.finished;
     }
 }
 // TODO: informasi liga, informsi isfinished

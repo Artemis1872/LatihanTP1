@@ -1,6 +1,12 @@
 public class Tim {
     private String nama;
     private Pemain[] arrofpemain;
+    public int peringkat;
+    public int jumlahmenang;
+    public int jumlahkalah;
+    public int jumlahpoin;
+    public int jumlahgol;
+    public int jumlahkebobolan;
 
     public Tim(String namatim, Pemain[] arrpemain) {
         this.arrofpemain = arrpemain;
@@ -18,4 +24,4 @@ public class Tim {
     }
 
 }
-// TODO: arr anggota pemain, nama tim, peringkat, jumlah menang, jumlah kalah, jumlahseri, jumlahpoin, jumlahgol, jumlah kebobolan
+// TODO: peringkat, jumlah menang, jumlah kalah, jumlahseri, jumlahpoin, jumlahgol, jumlah kebobolan
