@@ -1,10 +1,14 @@
 public class Pemain {
-    private String nama = "";
-    private int nomor = 0;
+    private String nama;
+    private int nomor;
 
-    public Pemain(int nomor, String nama) {
+    public Pemain(String nama, int nomor) {
         this.nama = nama;
         this.nomor = nomor;
+    }
+
+    public void PrintPemain() {
+        System.out.println(String.format("No. %s dengan nama %s", this.nomor, this.nama));
     }
 
 }
